@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f "form.html" ]; then
+if [ -f "access.html" ]; then
   echo "form.html exists"
 else
   echo "form.html missing"
