@@ -1,0 +1,27 @@
+name: HTML Test Pipeline
+
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: List files
+        run: ls -la
+
+      - name: Check HTML files
+        run: |
+          test -f form.html
+          test -f studentdata.html
+          test -f access.html
+          test -f new.html
+      - name: Run Test Script
+        run: bash test.sh
